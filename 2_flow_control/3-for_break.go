@@ -20,4 +20,16 @@ func main() {
 		}
 		fmt.Println(string(text[i]))
 	}
+
+	word := "pneumonoultramicroscopicsilicovolcanoconiosis"
+	word_length := len(word)
+	i := 0
+	for word_length > i {
+		if string(word[i]) == "t" {
+			break
+		}
+		fmt.Println(string(word[i]))
+		i++
+	}
+
 }
