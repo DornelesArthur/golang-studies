@@ -29,10 +29,15 @@ func main() {
 	}
 	fmt.Println(len(bool_array))
 
+	// append
 	list := []int{4, 5, 6, 8, 10}
 
 	fmt.Println(list)
 	list = append(list, 16)
 	fmt.Println(list)
 
+	// make
+	new_list := make([]int, 1)
+	new_list = append(new_list, 23)
+	fmt.Println(new_list)
 }
