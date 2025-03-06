@@ -18,4 +18,8 @@ func main() {
 		fmt.Println("Key dont exist")
 	}
 
+	for key, value := range cities_population {
+		fmt.Println("Key: ", key)
+		fmt.Println("Value: ", value)
+	}
 }
