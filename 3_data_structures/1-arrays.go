@@ -40,4 +40,11 @@ func main() {
 	new_list := make([]int, 1)
 	new_list = append(new_list, 23)
 	fmt.Println(new_list)
+
+	new_list2 := list[:3]
+	new_list3 := list[3:]
+	last_number := list[len(list)-1:]
+	fmt.Println(new_list2)
+	fmt.Println(new_list3)
+	fmt.Println(last_number)
 }
