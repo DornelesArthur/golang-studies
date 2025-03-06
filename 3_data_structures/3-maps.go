@@ -18,6 +18,9 @@ func main() {
 		fmt.Println("Key dont exist")
 	}
 
+	delete(cities_population, "New York")
+	delete(cities_population, "Paris")
+
 	for key, value := range cities_population {
 		fmt.Println("Key: ", key)
 		fmt.Println("Value: ", value)
