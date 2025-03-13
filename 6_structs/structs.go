@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"golang_studies/6_structs/address"
+	address_alias "golang_studies/6_structs/address"
 )
 
 func main() {
 	fmt.Println("Init")
 
-	address := address.Address{
+	address := address_alias.Address{
 		Street: "2A Macquarie Street",
 		Number: 12512,
 		City:   "Atlantis",
