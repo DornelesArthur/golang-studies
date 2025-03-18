@@ -30,4 +30,19 @@ func main() {
 	fmt.Println(person.GetAge())
 	person.SetHeigth()
 	fmt.Println(person.Height)
+
+	//=======================================//
+
+	motorcycle := model_alias.Motorcycle{
+		Vehicle: model_alias.Vehicle{
+			Year:         2025,
+			Brand:        "Honda",
+			Model:        "CB 500F",
+			LicensePlate: "AK2K-23MB",
+		},
+		CC: 471,
+	}
+	fmt.Println(motorcycle)
+	fmt.Println(motorcycle.Brand, motorcycle.Model, motorcycle.LicensePlate, motorcycle.Year)
+
 }
