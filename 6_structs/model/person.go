@@ -8,6 +8,7 @@ type Person struct {
 	Name      string
 	Address   Address
 	BirthDate time.Time
+	Height    int
 }
 
 // "method"
@@ -30,4 +31,9 @@ func GetAge(p Person) (age int) {
 		age -= 1
 	}
 	return
+}
+
+// Must be a pointer
+func (p *Person) SetHeigth() {
+	p.Height = 175
 }

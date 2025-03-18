@@ -28,4 +28,6 @@ func main() {
 	fmt.Println(person)
 	fmt.Println(model_alias.GetAge(person))
 	fmt.Println(person.GetAge())
+	person.SetHeigth()
+	fmt.Println(person.Height)
 }
