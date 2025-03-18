@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	model_alias "golang_studies/6_structs/model"
+	"time"
 )
 
 func main() {
@@ -21,7 +22,10 @@ func main() {
 			Number: 21521,
 			City:   "Not Atlantis",
 		},
+		BirthDate: time.Date(1995, 03, 18, 0, 0, 0, 0, time.Local),
 	}
 	fmt.Println(address)
 	fmt.Println(person)
+	fmt.Println(model_alias.GetAge(person))
+	fmt.Println(person.GetAge())
 }
