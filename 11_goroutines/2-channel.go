@@ -1,21 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	channel := make(chan int)
+	// Channel buffer
+	channel := make(chan int, 100)
 	go getIDs(channel)
 
 	// value := <-channel
 	// fmt.Println(value)
 
 	for v := range channel {
-		fmt.Println(v)
+		fmt.Println("receiving: ", v)
+		time.Sleep(time.Second)
 	}
 }
 
-func getIDs(channel chan int) {
+// Read only channel
+// func getIDs(channel <-chan int) {
+// "Write" only channel
+func getIDs(channel chan<- int) {
 	for v := range 100 {
+		fmt.Println("sending: ", v)
 		channel <- v
 	}
 	close(channel)
